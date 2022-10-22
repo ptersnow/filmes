@@ -1,0 +1,11 @@
+title: Filmes
+template: filmes/show
+layout: layout
+taxonomies:
+  - categorias
+revisions: false
+route: '/filmes/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

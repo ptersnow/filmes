@@ -1,0 +1,15 @@
+<ul>
+    {{ collection:filmes }}
+        <li>
+            <div>
+                <a href="{{ url }}">
+                    <h3>{{ title }}</h3>
+
+                    <img src="{{ poster }}" alt="" >
+
+                    <p>{{ content }}</p>
+                </a>
+            </div>
+        </li>
+    {{ /collection:filmes }}
+</ul>
