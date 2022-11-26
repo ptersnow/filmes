@@ -1,4 +1,4 @@
-<nav>
+<nav class="pb-10">
     <h1 class="text-3xl font-bold">Filmes em cartaz</h1>
 </nav>
 
@@ -14,7 +14,20 @@
                     <h4 class="absolute top-14 left-5 bg-yellow-100 text-black">Estreia em: {{ lancamento | format:Y }}</h4>
                 </a>
 
-                <p class="text-lg pl-5">{{ content }}</p>
+                <div class="flex flex-col px-5">
+                    <div class="text-lg pl-5">{{ content }}</div>
+
+                    <div class="flex flex-row ">
+                        {{ categorias }}
+                            <a
+                                href="{{ url }}"
+                                class="bg-red-600 text-white block mt-4 w-28 text-center ml-5 shadow-md shadow-zinc-900 rounded font-bold"
+                            >
+                                {{ title }}
+                            </a>
+                        {{ /categorias }}
+                    </div>
+                </div>
             </div>
         </li>
     {{ /collection:filmes }}
